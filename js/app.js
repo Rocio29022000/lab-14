@@ -29,7 +29,7 @@ AppState.prototype.loadItems = function () {
   // TODO: Update this instance method to retrieve data from local storage instead of creating new Products on each page load
   const localProducts = JSON.parse(localStorage.getItem("productData"));
     if(localProducts){
-      allProducts = localProducts
+      this.allProducts = localProducts
     } else {
       console.log("new products please");
       this.instantiateProducts();
